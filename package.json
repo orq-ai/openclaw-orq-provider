@@ -17,7 +17,7 @@
   },
   "openclaw": {
     "extensions": [
-      "./index.ts"
+      "./src/index.ts"
     ],
     "install": {
       "minHostVersion": ">=2026.3.22"
