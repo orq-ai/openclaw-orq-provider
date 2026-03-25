@@ -1,0 +1,29 @@
+{
+  "name": "@openclaw/orq-provider",
+  "version": "2026.3.25",
+  "description": "OpenClaw Orq AI provider plugin — routes requests through the Orq AI router",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.22"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "minHostVersion": ">=2026.3.22"
+    },
+    "release": {
+      "publishToNpm": true
+    }
+  }
+}
