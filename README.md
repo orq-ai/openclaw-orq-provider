@@ -4,8 +4,31 @@ OpenClaw plugin that adds [Orq AI](https://orq.ai) as a model provider. Routes r
 
 ## Install
 
+### Option A: Use the orq-ai OpenClaw fork (recommended)
+
+This plugin is bundled as a submodule in the [orq-ai OpenClaw fork](https://github.com/orq-ai/openclaw). Clone and install:
+
 ```bash
+git clone --recurse-submodules https://github.com/orq-ai/openclaw.git
+cd openclaw
+pnpm install
+```
+
+The Orq provider is available out of the box — no extra plugin install step needed.
+
+### Option B: Install as a standalone plugin
+
+If you're running upstream OpenClaw:
+
+```bash
+# From npm (once published)
 openclaw plugins install @openclaw/orq-provider
+
+# Or from a local clone
+git clone https://github.com/orq-ai/openclaw-orq-provider.git
+openclaw plugins install ./openclaw-orq-provider
+
+# Then restart the gateway
 openclaw gateway restart
 ```
 
@@ -31,7 +54,7 @@ The plugin registers models from multiple providers through the Orq router:
 | Anthropic | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5                  |
 | Google    | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview (AI + Vertex) |
 | OpenAI    | GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-5.2                  |
-| Groq      | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                 |
+| Groq      | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                |
 | Cerebras  | GPT OSS 120B, Llama 3.x, Qwen 3                         |
 
 The default model is `orq/openai/gpt-5.2`.
@@ -42,7 +65,7 @@ The default model is `orq/openai/gpt-5.2`.
 # Install locally for testing
 openclaw plugins install ./path/to/openclaw-orq-provider
 
-# Or link from the openclaw repo
+# Or use the submodule in the openclaw fork
 cd ../openclaw
 pnpm install
 ```
