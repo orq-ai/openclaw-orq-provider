@@ -1,8 +1,16 @@
 import { defineSingleProviderPluginEntry } from "openclaw/plugin-sdk/provider-entry";
 import { applyOrqConfig } from "./onboard.js";
-import { ORQ_DEFAULT_MODEL_REF } from "./orq-models.js";
+import { buildOrqModelDefinitions, ORQ_BASE_URL, ORQ_DEFAULT_MODEL_REF } from "./orq-models.js";
 
 const PROVIDER_ID = "orq";
+
+async function buildOrqProvider() {
+  return {
+    baseUrl: ORQ_BASE_URL,
+    api: "openai-completions" as const,
+    models: buildOrqModelDefinitions(),
+  };
+}
 
 export default defineSingleProviderPluginEntry({
   id: PROVIDER_ID,
@@ -32,5 +40,8 @@ export default defineSingleProviderPluginEntry({
         },
       },
     ],
+    catalog: {
+      buildProvider: buildOrqProvider,
+    },
   },
 });
