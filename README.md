@@ -26,13 +26,13 @@ export ORQ_API_KEY=<your-key>
 
 The plugin registers models from multiple providers through the Orq router:
 
-| Provider | Models |
-|---|---|
-| Anthropic | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5 |
-| Google | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview (AI + Vertex) |
-| OpenAI | GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-5.2 |
-| Groq | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3 |
-| Cerebras | GPT OSS 120B, Llama 3.x, Qwen 3 |
+| Provider  | Models                                                  |
+| --------- | ------------------------------------------------------- |
+| Anthropic | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5                  |
+| Google    | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview (AI + Vertex) |
+| OpenAI    | GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-5.2                  |
+| Groq      | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                 |
+| Cerebras  | GPT OSS 120B, Llama 3.x, Qwen 3                         |
 
 The default model is `orq/openai/gpt-5.2`.
 
