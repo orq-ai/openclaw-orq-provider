@@ -348,6 +348,83 @@ const ORQ_MODEL_CATALOG: OrqModelEntry[] = [
     contextWindow: 128000,
     maxTokens: 8192,
   },
+  // Kimi (MoonshotAI)
+  {
+    id: "moonshotai/kimi-k2.5",
+    name: "Kimi K2.5",
+    reasoning: true,
+    input: ["text", "image"],
+    cost: { input: 0.6, output: 3, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 262144,
+    maxTokens: 65536,
+  },
+  // DeepSeek
+  {
+    id: "deepseek/deepseek-chat",
+    name: "DeepSeek Chat",
+    reasoning: false,
+    input: ["text"],
+    cost: { input: 0.28, output: 0.42, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 128000,
+    maxTokens: 8192,
+  },
+  {
+    id: "deepseek/deepseek-reasoner",
+    name: "DeepSeek Reasoner",
+    reasoning: true,
+    input: ["text"],
+    cost: { input: 0.28, output: 0.42, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 128000,
+    maxTokens: 64000,
+  },
+  // Alibaba (Qwen)
+  {
+    id: "alibaba/qwen3.5-plus",
+    name: "Qwen 3.5 Plus",
+    reasoning: true,
+    input: ["text", "image"],
+    cost: { input: 0.4, output: 2.4, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 1000000,
+    maxTokens: 65536,
+  },
+  {
+    id: "alibaba/qwen3.5-397b-a17b",
+    name: "Qwen 3.5 397B A17B",
+    reasoning: true,
+    input: ["text", "image"],
+    cost: { input: 0.6, output: 3.6, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 262144,
+    maxTokens: 65536,
+  },
+  // Z.AI (Zhipu)
+  {
+    id: "zai/glm-4.7-flash",
+    name: "GLM 4.7 Flash",
+    reasoning: false,
+    input: ["text"],
+    cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 200000,
+    maxTokens: 131072,
+  },
+  {
+    id: "zai/glm-5",
+    name: "GLM 5",
+    reasoning: false,
+    input: ["text"],
+    cost: { input: 1, output: 3.2, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 204800,
+    maxTokens: 131072,
+  },
+  // MiniMax
+  {
+    id: "minimax/MiniMax-M2.7",
+    name: "MiniMax M2.7",
+    reasoning: true,
+    input: ["text"],
+    cost: { input: 0.3, output: 1.2, cacheRead: 0, cacheWrite: 0 },
+    contextWindow: 204800,
+    maxTokens: 131072,
+  },
 ];
 
 export function buildOrqModelDefinitions(): ModelDefinitionConfig[] {
