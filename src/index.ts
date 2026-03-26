@@ -23,7 +23,7 @@ export default defineSingleProviderPluginEntry({
       {
         methodId: "api-key",
         label: "Orq AI API key",
-        hint: "OpenAI-compatible router",
+        hint: "API key",
         optionKey: "orqApiKey",
         flagName: "--orq-api-key",
         envVar: "ORQ_API_KEY",
