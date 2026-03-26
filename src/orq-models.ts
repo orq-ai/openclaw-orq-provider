@@ -1,7 +1,7 @@
 import type { ModelDefinitionConfig } from "openclaw/plugin-sdk/provider-onboard";
 
 export const ORQ_BASE_URL = "https://api.orq.ai/v2/router";
-export const ORQ_DEFAULT_MODEL_ID = "openai/gpt-5.2";
+export const ORQ_DEFAULT_MODEL_ID = "openai/gpt-5.4-mini";
 export const ORQ_DEFAULT_MODEL_REF = `orq/${ORQ_DEFAULT_MODEL_ID}`;
 
 type OrqModelEntry = {
