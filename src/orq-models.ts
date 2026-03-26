@@ -162,7 +162,7 @@ const ORQ_MODEL_CATALOG: OrqModelEntry[] = [
   {
     id: "openai/gpt-5.4-mini",
     name: "GPT-5.4 Mini",
-    reasoning: true,
+    reasoning: false,
     input: ["text", "image"],
     cost: { input: 0.75, output: 4.5, cacheRead: 0.075, cacheWrite: 0 },
     contextWindow: 400000,
@@ -171,7 +171,7 @@ const ORQ_MODEL_CATALOG: OrqModelEntry[] = [
   {
     id: "openai/gpt-5.4-nano",
     name: "GPT-5.4 Nano",
-    reasoning: true,
+    reasoning: false,
     input: ["text", "image"],
     cost: { input: 0.2, output: 1.25, cacheRead: 0.02, cacheWrite: 0 },
     contextWindow: 400000,
