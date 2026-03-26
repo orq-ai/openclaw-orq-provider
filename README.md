@@ -1,6 +1,6 @@
 # @openclaw/orq-provider
 
-OpenClaw plugin that adds [Orq AI](https://orq.ai) as a model provider. Routes requests through the Orq AI router, giving you access to 30+ models from Anthropic, Google, OpenAI, Groq, and Cerebras via a single API key.
+OpenClaw plugin that adds [Orq AI](https://orq.ai) as a model provider. Routes requests through the Orq AI router, giving you access to 45+ models from multiple providers via a single API key.
 
 ## Install
 
@@ -49,15 +49,20 @@ export ORQ_API_KEY=<your-key>
 
 The plugin registers models from multiple providers through the Orq router:
 
-| Provider  | Models                                                  |
-| --------- | ------------------------------------------------------- |
-| Anthropic | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5                  |
-| Google    | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview (AI + Vertex) |
-| OpenAI    | GPT-5, GPT-5 Mini, GPT-5 Nano, GPT-5.2                  |
-| Groq      | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                |
-| Cerebras  | GPT OSS 120B, Llama 3.x, Qwen 3                         |
+| Provider   | Models                                                                   |
+| ---------- | ------------------------------------------------------------------------ |
+| Anthropic  | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5                                  |
+| Google     | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview, 3.1 Pro/Flash Lite Preview   |
+| OpenAI     | GPT-5, GPT-5 Mini/Nano, GPT-5.2, GPT-5.4, GPT-5.4 Mini/Nano/Pro       |
+| Groq       | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                                |
+| Cerebras   | GPT OSS 120B, Llama 3.x, Qwen 3                                         |
+| DeepSeek   | DeepSeek Chat, DeepSeek Reasoner                                         |
+| MoonshotAI | Kimi K2.5                                                                |
+| Alibaba    | Qwen 3.5 Plus, Qwen 3.5 397B                                            |
+| Z.AI       | GLM-5, GLM-4.7 Flash (free)                                             |
+| MiniMax    | MiniMax M2.7                                                             |
 
-The default model is `orq/openai/gpt-5.2`.
+The default model is `orq/openai/gpt-5.4-mini`.
 
 ## Development
 
