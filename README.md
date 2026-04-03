@@ -21,10 +21,6 @@ The Orq provider is available out of the box — no extra plugin install step ne
 If you're running upstream OpenClaw:
 
 ```bash
-# From npm (once published)
-openclaw plugins install @openclaw/orq-provider
-
-# Or from a local clone
 git clone https://github.com/orq-ai/openclaw-orq-provider.git
 openclaw plugins install ./openclaw-orq-provider
 
