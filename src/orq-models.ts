@@ -16,6 +16,24 @@ type OrqModelEntry = {
 
 const ORQ_MODEL_CATALOG: OrqModelEntry[] = [
   {
+    id: "anthropic/claude-opus-4-6",
+    name: "Claude Opus 4.6",
+    reasoning: true,
+    input: ["text", "image"],
+    cost: { input: 5, output: 25, cacheRead: 0.5, cacheWrite: 6.25 },
+    contextWindow: 1000000,
+    maxTokens: 128000,
+  },
+  {
+    id: "anthropic/claude-sonnet-4-6",
+    name: "Claude Sonnet 4.6",
+    reasoning: true,
+    input: ["text", "image"],
+    cost: { input: 3, output: 15, cacheRead: 0.3, cacheWrite: 3.75 },
+    contextWindow: 1000000,
+    maxTokens: 64000,
+  },
+  {
     id: "anthropic/claude-opus-4-5-20251101",
     name: "Claude Opus 4.5",
     reasoning: false,

@@ -67,7 +67,7 @@ The plugin registers models from multiple providers through the Orq router:
 
 | Provider   | Models                                                                   |
 | ---------- | ------------------------------------------------------------------------ |
-| Anthropic  | Claude Opus 4.5, Sonnet 4.5, Haiku 4.5                                  |
+| Anthropic  | Claude Opus 4.6/4.5, Sonnet 4.6/4.5, Haiku 4.5                          |
 | Google     | Gemini 2.5 Pro/Flash, 3 Pro/Flash Preview, 3.1 Pro/Flash Lite Preview   |
 | OpenAI     | GPT-5, GPT-5 Mini/Nano, GPT-5.2, GPT-5.4, GPT-5.4 Mini/Nano/Pro       |
 | Groq       | Llama 3.x/4.x, Kimi K2, GPT OSS, Qwen 3                                |
