@@ -30,7 +30,7 @@ openclaw gateway restart
 
 ## Setup
 
-1. Get an API key at [cloud.orq.ai](https://cloud.orq.ai)
+1. Get an API key at [my.orq.ai](https://my.orq.ai)
 2. Add `"orq"` to `plugins.allow` in `openclaw.json`:
    ```json
    "plugins": {

@@ -32,7 +32,7 @@ export default defineSingleProviderPluginEntry({
         applyConfig: (cfg) => applyOrqConfig(cfg),
         noteMessage: [
           "Orq AI provides an OpenAI-compatible router for multiple model providers.",
-          "Get your API key at: https://cloud.orq.ai",
+          "Get your API key at: https://my.orq.ai",
         ].join("\n"),
         noteTitle: "Orq AI",
         wizard: {
