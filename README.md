@@ -37,16 +37,26 @@ openclaw gateway restart
      "allow": ["orq", ...]
    }
    ```
-3. Register the API key:
+3. Register the API key using one of these methods:
+
+   **Interactive** — walks you through setup with prompts:
+   ```bash
+   openclaw onboard
+   # Select "orq-api-key" when prompted for auth choice
+   ```
+
+   **One-liner** — no prompts:
    ```bash
    openclaw onboard --non-interactive --accept-risk \
      --auth-choice orq-api-key \
      --orq-api-key <your-key>
    ```
-   Or set the environment variable:
+
+   **Environment variable** — the plugin reads this at startup:
    ```bash
    export ORQ_API_KEY=<your-key>
    ```
+
 4. Restart the gateway: `openclaw gateway restart`
 
 > **Note:** The onboard command may change your primary model. Check `agents.defaults.model.primary` in your config after running it.
