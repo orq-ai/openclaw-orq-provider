@@ -31,15 +31,25 @@ openclaw gateway restart
 ## Setup
 
 1. Get an API key at [cloud.orq.ai](https://cloud.orq.ai)
-2. Run onboarding or set the key directly:
+2. Add `"orq"` to `plugins.allow` in `openclaw.json`:
+   ```json
+   "plugins": {
+     "allow": ["orq", ...]
+   }
+   ```
+3. Register the API key:
+   ```bash
+   openclaw onboard --non-interactive --accept-risk \
+     --auth-choice orq-api-key \
+     --orq-api-key <your-key>
+   ```
+   Or set the environment variable:
+   ```bash
+   export ORQ_API_KEY=<your-key>
+   ```
+4. Restart the gateway: `openclaw gateway restart`
 
-```bash
-# Via onboarding
-openclaw onboard --orq-api-key <your-key>
-
-# Or via environment variable
-export ORQ_API_KEY=<your-key>
-```
+> **Note:** The onboard command may change your primary model. Check `agents.defaults.model.primary` in your config after running it.
 
 ## Available models
 
